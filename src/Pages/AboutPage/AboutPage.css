@@ -1,0 +1,33 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 13% 10%;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  padding: 0 20%;
+  gap: 5%;
+}
+
+img.profile-image {
+  width: 100%;
+  min-width: 100px;
+}
+
+.about-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  width: 60%;
+  min-width: 240px;
+}
+
+.about-image-links {
+  width: 40%;
+}

@@ -1,0 +1,54 @@
+.home-page {
+  padding: 40px 50px;
+  min-height: calc(100vh - 110px);
+  height: auto;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20% 10%;
+}
+
+.action-button {
+  margin: 2px;
+  width: fit-content;
+  background-color: rgb(255, 212, 160);
+  border: 0px;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.action-button:hover {
+  background-color: rgb(251, 203, 144);
+}
+
+.action-button-content {
+  display: flex;
+  color: #f7931e;
+  flex-direction: row;
+  align-items: center;
+  transition: 1s;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.action-button-content:hover {
+  animation-name: bounce;
+  color: #ffffff;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
