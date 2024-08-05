@@ -1,14 +1,29 @@
 .home-page {
-  padding: 40px 50px;
+  padding: 40px 40px;
   min-height: calc(100vh - 110px);
   height: auto;
 }
 
 .hero-info {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 20% 9%;
+}
+
+.hero-image img {
+  bottom: 0px;
+  right: 0px;
+  width: 50%;
+  object-fit: cover;
+  position: fixed;
+}
+
+.hero-text {
+  width: 60%;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 20% 10%;
 }
 
 .action-button {

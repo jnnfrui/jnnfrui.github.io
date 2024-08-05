@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Share+Tech+Mono&display=swap");
+
 .App {
   text-align: center;
 }
@@ -7,13 +9,26 @@
 }
 
 h1 {
-  font-size: 30px;
-  margin: 2px;
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  margin: 0px;
+  color: #3d2008;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 30px;
+  font-family: "Oswald", sans-serif;
   margin: 2px;
+  color: #3d2008;
+}
+
+.hero-image img {
+  bottom: 0px;
+  right: 0px;
+  width: 50%;
+  object-fit: cover;
+  position: fixed;
+  z-index: 0;
 }
 
 .App-logo {

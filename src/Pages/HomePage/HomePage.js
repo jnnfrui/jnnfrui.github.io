@@ -3,10 +3,14 @@ import { useState } from "react";
 import "./HomePage.css";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import AboutPage from "../AboutPage/AboutPage";
+import { Fade, Slide } from "react-awesome-reveal";
+import catopen from "../../Assets/cat-open.png";
+import catclosed from "../../Assets/cat-closed.png";
 
 export default function HomePage({ display }) {
   console.log(display);
   const [displayAbout, setDisplayAbout] = useState(display);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleOpen = () => {
     setDisplayAbout(true);
@@ -31,13 +35,19 @@ export default function HomePage({ display }) {
   return (
     <div className="home-page">
       <div className="hero-info">
-        <h1>jennifer tan</h1>
-        <h2>— software developer and designer</h2>
-        <button className="action-button" onClick={handleOpen}>
-          <div className="action-button-content">
-            about me <KeyboardDoubleArrowDownIcon />
-          </div>
-        </button>
+        <div className="hero-text">
+          <Slide>
+            <h1>jennifer tan</h1>
+          </Slide>
+          <Slide>
+            <h2>— aspiring software/web developer and designer</h2>
+            <button className="action-button" onClick={handleOpen}>
+              <div className="action-button-content">
+                about me <KeyboardDoubleArrowDownIcon />
+              </div>
+            </button>
+          </Slide>
+        </div>
       </div>
       {displayAbout && <AboutPage />}
     </div>

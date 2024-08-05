@@ -5,7 +5,7 @@ nav {
   position: -webkit-sticky;
   top: 0;
   top: 0; /* Ensure the navbar sticks to the top of the viewport */
-  padding: 10px 50px;
+  padding: 10px 60px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ede9e2;
@@ -15,10 +15,21 @@ nav {
 nav ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 nav ul li {
   display: inline;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  margin: 10px;
+}
+
+nav ul li {
+  display: inline;
+  font-family: "Oswald", sans-serif;
   margin: 10px;
 }
 
