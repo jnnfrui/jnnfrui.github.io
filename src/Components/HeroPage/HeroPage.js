@@ -249,23 +249,25 @@ export default function HeroPage() {
             {projects.map((project) => {
               return (
                 <div className="project-box">
-                  <img src={project.Image} />
-                  <div className="subheader">
-                    <b>{project.Name}</b>
-                  </div>
-                  <div style={{ display: "flex" }}>
-                    {project.Language.map((language) => {
-                      return (
-                        <Chip
-                          label={language}
-                          style={{ width: "fit-content", color: "white" }}
-                        />
-                      );
-                    })}
+                  <div>
+                    <img src={project.Image} />
+                    <div className="subheader">
+                      <b>{project.Name}</b>
+                    </div>
+                    <div style={{ display: "flex" }}>
+                      {project.Language.map((language) => {
+                        return (
+                          <Chip
+                            label={language}
+                            style={{ width: "fit-content", color: "white" }}
+                          />
+                        );
+                      })}
+                    </div>
+                    <div className="subheader">{project.Description}</div>
                   </div>
 
-                  <div className="subheader">{project.Description}</div>
-                  <div className="subheader" style={{ marginTop: "auto" }}>
+                  <div className="subheader" style={{ display: "flex" }}>
                     {project.Link === "N/A" ? (
                       <>
                         This is a private repository. Please contact me for more
