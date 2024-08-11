@@ -1,0 +1,178 @@
+.hero-navbar {
+  display: flex;
+  width: fit-content;
+  min-width: 60vw;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  transition: height 0.3s ease; /* Smooth transition for height change */
+  margin: 30px auto;
+  padding: 20px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  background-color: transparent; /* Default to transparent */
+  z-index: 1000;
+  border-radius: 60px;
+}
+
+.navbar-block {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 80px;
+  transition: opacity 0.3s ease; /* Smooth transition for hiding navbar items */
+}
+
+.speech-message {
+  font-family: "Syne", sans-serif;
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  right: 20px;
+  background-color: rgba(50, 41, 35, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+
+  opacity: 0; /* Start as hidden */
+  transform: translateY(10px); /* Start slightly down */
+  max-width: 0; /* Start with max-width of 0 to hide initially */
+  width: 0; /* Width hides to 0 */
+  height: 50px; /* Fixed height */
+  overflow: hidden; /* Hide overflow to ensure clean transitions */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+    max-width 0.3s ease-in-out;
+  z-index: 100000;
+  align-items: center;
+  justify-content: center;
+}
+
+.speech-message.active {
+  opacity: 1;
+  transform: translateY(0); /* Move to original position */
+  max-width: 600px; /* Maximum width when active */
+  width: auto; /* Width adjusts to content */
+}
+
+.speech-message.inactive {
+  opacity: 0;
+  transform: translateY(10px); /* Move down again */
+  max-width: 0; /* Maximum width when inactive */
+  width: 0; /* Width hides to 0 */
+}
+
+.MuiIconButton-root {
+  color: white !important;
+}
+
+.speech-message .MuiAvatar-root {
+  margin-right: 10px;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-text {
+  font-family: "Syne", sans-serif;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+}
+
+.navbar-text:hover {
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+/* Styles when search is active */
+.search-active {
+  height: 60px; /* Adjust height to match your design */
+}
+
+.search-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Search bar styling */
+.search-bar {
+  position: fixed;
+  top: 60;
+  margin-top: 40px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  color: white;
+  border: white !important;
+  width: 0;
+  z-index: 10; /* Ensure search bar is above other content */
+}
+
+.navbar-text.active {
+  text-decoration: underline; /* Underline active section */
+  transform: translateY(-2px);
+}
+
+/* Apply semi-transparent background */
+.hero-navbar.semi-transparent {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.search-visible {
+  width: 50%;
+  opacity: 0.5;
+}
+
+.MuiInputLabel-root {
+  color: white !important;
+}
+
+.MuiAutocomplete-popover {
+  background-color: transparent !important; /* Make the dropdown background transparent */
+}
+
+.MuiAutocomplete-listbox {
+  background-color: transparent !important; /* Make the listbox background transparent */
+}
+
+.MuiAutocomplete-option {
+  color: white; /* Set text color to white */
+  background-color: transparent !important; /* Ensure background is transparent */
+}
+
+.MuiAutocomplete-option:hover,
+.MuiAutocomplete-option.Mui-focused {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Optional: Highlight option on hover/focus */
+}

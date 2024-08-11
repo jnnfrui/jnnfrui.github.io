@@ -6,7 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fffdfa;
-  cursor: url("/src/Assets/cursor.cur"), auto;
 }
 
 code {

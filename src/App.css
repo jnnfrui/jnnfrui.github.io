@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pangolin&family=Share+Tech+Mono&display=swap");
 
 .App {
   text-align: center;
@@ -10,14 +10,14 @@
 
 h1 {
   font-size: 40px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Pangolin", cursive;
   margin: 0px;
   color: #3d2008;
 }
 
 h2 {
   font-size: 30px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Pangolin", cursive;
   margin: 2px;
   color: #3d2008;
 }
